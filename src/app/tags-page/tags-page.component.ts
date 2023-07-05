@@ -25,10 +25,10 @@ export class TagsPageComponent {
       this.data = data
       console.log(this.data)
     })
-    this.getScreenHeight = 'height:' + window.innerHeight;
+    this.getScreenHeight = window.innerHeight - 200;
   }
   @HostListener('window:resize', ['$event'])
   onWindowResize() {
-    this.getScreenHeight = 'height:' + window.innerHeight;
+    this.getScreenHeight = window.innerHeight - 200;
   }
 }

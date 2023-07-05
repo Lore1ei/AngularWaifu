@@ -1,5 +1,5 @@
-<div [style]=[getScreenHeight]>
-  <div class="block_of_tags">
+<div [style.height]="getScreenHeight + 'px'" style="position: relative; display: flex; align-items: center; justify-content: center" >
+<div class="block_of_tags">
     <h3>Tags</h3>
     <div *ngFor="let item of data | keyvalue">
       <div class="tag_main_name"  (click)="openAccordion($event)"
