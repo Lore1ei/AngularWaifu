@@ -1,1 +1,24 @@
-<p>top-block works!</p>
+
+  <div class="row" style="margin-bottom: 2.5rem">
+    <div class="col-sm-12 col-md-8" style="margin-bottom: 2.5rem">
+      <h1 style="font-size: 4.5rem">The <span class="text-info">API</span> for your
+        <span class="static-rainbow">Waifu</span> images</h1>
+
+      <p class="fs-5">
+        This is an Angular app created to display a gallery of Waifu images.
+        You can compose a gallery of your favorite pictures and even search for specific ones.
+        It is easy to use and well-thought-out so that most of the endpoints have the same JSON structure.
+        I would like to thank the Angular team for building such a powerful and flexible framework that makes building applications like this a pleasure.
+      </p>
+
+      <h2>Get Started</h2>
+      <a [routerLink]="'/tags'" class="btn btn-lg btn-info zoom rainbow-1 shadow-none">See Images</a>
+    </div>
+
+    <div class="col-sm-12 col-md-4 zoom">
+      <a [routerLink]="'/preview/' + imageId" >
+        <img class="img-fluid img_hover" [height]="200" [src]="urlImage" alt="">
+      </a>
+    </div>
+  </div>
+

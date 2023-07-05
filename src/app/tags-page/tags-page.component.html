@@ -1,1 +1,19 @@
-<p>tags-page works!</p>
+<div [style]=[getScreenHeight]>
+  <div class="block_of_tags">
+    <h3>Tags</h3>
+    <div *ngFor="let item of data | keyvalue">
+      <div class="tag_main_name"  (click)="openAccordion($event)"
+           [ngClass]="accordionToggle == (item.key | uppercase) ? 'accordion_tag_open' : 'accordion_tag_close'">
+        <h2>{{ item.key | uppercase}}</h2>
+      </div>
+      <div class="acc_body" [ngClass]="accordionToggle == (item.key | uppercase) ? 'accordion_open' : 'accordion_close'">
+        <div class="acc_body_wrap">
+          <div *ngFor="let value of item.value">
+            {{value}}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
