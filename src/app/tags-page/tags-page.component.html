@@ -8,8 +8,10 @@
       </div>
       <div class="acc_body" [ngClass]="accordionToggle == (item.key | uppercase) ? 'accordion_open' : 'accordion_close'">
         <div class="acc_body_wrap">
-          <div *ngFor="let value of item.value">
-            {{value}}
+          <div class="tag_flex" *ngFor="let value of item.value">
+            <a (click)="movetoContact($event)" class="tag_a">
+              {{value}}
+            </a>
           </div>
         </div>
       </div>

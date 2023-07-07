@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import { TagsService } from "../services/tags.service";
+import {  Router } from '@angular/router';
 
 @Component({
   selector: 'app-tags-page',
@@ -10,7 +11,7 @@ export class TagsPageComponent {
   data: {} = {};
   accordionToggle: string = '';
   getScreenHeight: any = 0
-  constructor(private tagsService: TagsService) {
+  constructor(private tagsService: TagsService, private router: Router) {
   }
 
   openAccordion(e: Event){
@@ -18,6 +19,10 @@ export class TagsPageComponent {
       return this.accordionToggle = '';
     }
     return this.accordionToggle = (e.target as HTMLInputElement).innerText
+  }
+
+  movetoContact(e: Event){
+    return this.router.navigate(['/tag'],{queryParams: {search: (e.target as HTMLInputElement).innerText}})
   }
 
   ngOnInit(){

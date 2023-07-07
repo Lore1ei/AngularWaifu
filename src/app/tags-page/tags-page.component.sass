@@ -1,10 +1,10 @@
 .block_of_tags
   position: absolute
-  min-width: 480px
+  max-width: 480px
   background-color: #272727
   .acc_body
     margin: 0
-    transition: all 0.5s
+    transition: all 0.5s ease-in-out
     overflow: hidden
   h3
     padding: 0.5rem 1rem
@@ -42,3 +42,20 @@
   .acc_body_wrap
     padding: 0 25px 20px
 
+.acc_body_wrap
+  display: flex
+  flex-wrap: wrap
+  gap: 6px
+  a
+    padding: 6px 10px
+    color: #ffffff
+    text-decoration: none
+    border: 2px solid #f8f9fa
+    display: block
+    cursor: pointer
+    transition: all 0.3s
+    border-radius: 4px
+    &:hover
+      color: #000
+      background-color: #f8f9fa
+      border-color: #f8f9fa

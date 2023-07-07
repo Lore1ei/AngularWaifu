@@ -10,6 +10,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { PreviewComponent } from './preview/preview.component';
 import { TagsPageComponent } from './tags-page/tags-page.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TagPageComponent } from './tag-page/tag-page.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,6 +18,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     TopBlockComponent,
     PreviewComponent,
     TagsPageComponent,
+    TagPageComponent,
   ],
   imports: [
     BrowserModule,
