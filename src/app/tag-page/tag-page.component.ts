@@ -17,7 +17,7 @@ export class TagPageComponent {
   ngOnInit() {
     this.tagService.getTag(this.route.snapshot.queryParams['search']).subscribe(elements => {
       console.log("Elements: ", elements); // print out the elements object
-      this.data = elements.images
+      return this.data = elements
     });
   }
 

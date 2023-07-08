@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   title = 'Waifu Angular'
+
+  menuClicked(){
+    alert('In maintenance');
+  }
 }

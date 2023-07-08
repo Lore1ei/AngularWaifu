@@ -1,10 +1,9 @@
 <app-header></app-header>
 
-<div class="container" style="margin-top: 56px">
   <div class="wrap" style="position: relative">
-  <div  [@routeAnimations]="o && o.activatedRouteData
-      && o.activatedRouteData['animation']">
-    <router-outlet #o="outlet"></router-outlet>
+    <div  [@routeAnimations]="o && o.activatedRouteData
+        && o.activatedRouteData['animation']">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
   </div>
-  </div>
-</div>
+

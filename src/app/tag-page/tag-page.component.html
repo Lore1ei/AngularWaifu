@@ -1,5 +1,7 @@
-<div>
-  <div *ngFor="let img of data">
-    <img [src]="img?.preview_url" alt="">
+<div class="flex-imgs">
+  <div class="img_wrap" *ngFor="let img of data.images">
+    <a [href]="'https://cdn.waifu.im/' + img?.image_id + img?.extension" target="_blank">
+    <img class="img-fluid" [src]="'https://cdn.waifu.im/' + img?.image_id + img?.extension" alt="" loading="lazy">
+    </a>
   </div>
 </div>
